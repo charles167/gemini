@@ -1,0 +1,103 @@
+/* Sidebar Container */
+.sidebar {
+    min-height: 100vh;
+    width: 60px; /* Start with a collapsed width */
+    transition: width 0.3s ease; /* Smooth transition */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+}
+
+/* Extended Sidebar */
+.sidebar.extended {
+    width: 200px; /* Extended width */
+}
+
+/* Menu icon */
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Chat Button */
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+}
+
+/* Recent chats */
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.sidebar .recent-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+}
+
+/* Bottom section (Help, Activity, Settings) */
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar .bottom-item:hover {
+    background-color: #e6eaf1;
+}
+
+.sidebar img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50px;
+        padding: 15px;
+    }
+
+    .sidebar.extended {
+        width: 160px;
+    }
+}
